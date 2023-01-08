@@ -1,0 +1,18 @@
+server:
+ port: 8081
+ 
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jwt_security #?connectionTimeZone=UTC #change this to your database url
+    password: 1234 #change this to your database username
+    username: admin #change this to your database password
+  jpa:
+    show-sql: true
+    hibernate:
+     jdbc:
+      time_zone: America/Sao_Paulo #To fix wampp server error on Africa's time Zone
+     ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
